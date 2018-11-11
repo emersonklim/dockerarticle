@@ -27,9 +27,9 @@ LOCK TABLES `posts` WRITE;
 
 INSERT INTO `posts` (`id`, `title`, `body`, autor)
 VALUES
-	(1,'Primeiro Post','Conteúdo do primeiro post', 'Emerson Klimkowski'),
-	(2,'Segundo Post','Conteúdo do segundo post', 'Douglas'),
-	(3,'Terceiro Post','Conteúdo do terceiro post', 'desconhecido');
+	(1,'A vida de Bolsonaro','Meio facista', 'Emerson Klimkowski'),
+	(2,'A vida de Lula','Preso', 'Douglas'),
+	(3,'A vida de haddad','Perdeu a eleição', 'desconhecido');
 
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
