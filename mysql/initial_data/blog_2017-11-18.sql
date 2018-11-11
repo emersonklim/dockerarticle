@@ -25,7 +25,7 @@ CREATE TABLE `posts` (
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
 
-INSERT INTO `posts` (`id`, `title`, `body`)
+INSERT INTO `posts` (`id`, `title`, `body`, autor)
 VALUES
 	(1,'Primeiro Post','Conteúdo do primeiro post', 'Emerson Klimkowski'),
 	(2,'Segundo Post','Conteúdo do segundo post', 'Douglas'),
