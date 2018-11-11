@@ -13,11 +13,10 @@ try {
         echo "<li>".$post->title."</li>";
     }
     echo "</ul>";
-
-$pdo = new PDO("mysql:host=mysql;dbname=blog", $dbuser, $dbpass);
-    $statement = $pdo->prepare("SELECT * FROM posts where id=3");
-    $statement->execute();
-    $ultimos = $statement->fetchAll(PDO::FETCH_OBJ);
+    
+    $statement2 = $pdo->prepare("SELECT * FROM posts where id=3");
+    $statement2->execute();
+    $ultimos = $statement2->fetchAll(PDO::FETCH_OBJ);
     
     echo "<h2>Ultimo Post</h2>";
     echo "<ul>";
