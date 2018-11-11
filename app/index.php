@@ -21,7 +21,7 @@ try {
     echo "<h2>Ultimo Post</h2>";
     echo "<ul>";
     foreach ($ultimos as $post ) {
-        echo "<li><b>Ultimo</b>".$ultimos->title."</li>";
+        echo "<li><b>Ultimo</b>".$post->title."</li>";
     }
     echo "</ul>";
 
