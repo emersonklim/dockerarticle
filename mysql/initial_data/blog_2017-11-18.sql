@@ -18,6 +18,7 @@ CREATE TABLE `posts` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL DEFAULT '',
   `body` text NOT NULL,
+   autor varchar(200) not null,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -26,9 +27,9 @@ LOCK TABLES `posts` WRITE;
 
 INSERT INTO `posts` (`id`, `title`, `body`)
 VALUES
-	(1,'Primeiro Post','Conteúdo do primeiro post'),
-	(2,'Segundo Post','Conteúdo do segundo post'),
-	(3,'Terceiro Post','Conteúdo do terceiro post');
+	(1,'Primeiro Post','Conteúdo do primeiro post', 'Emerson Klimkowski'),
+	(2,'Segundo Post','Conteúdo do segundo post', 'Douglas'),
+	(3,'Terceiro Post','Conteúdo do terceiro post', 'desconhecido');
 
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
