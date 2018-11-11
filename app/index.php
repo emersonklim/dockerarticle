@@ -8,11 +8,14 @@ try {
     $posts = $statement->fetchAll(PDO::FETCH_OBJ);
     
     echo "<h2>Posts</h2>";
-    echo "<ul>";
+    echo "<table>";
+    echo "<tr><td>Titulo</td><td>Autor</td></tr>";
     foreach ($posts as $post ) {
-        echo "<li><b>".$post->title."</b> <i>" . $post->autor . "</i></li>";
+        echo "<tr>";
+        echo "<td>".$post->title."</td> <td>" . $post->autor . "</td>";
+        echo "</tr>";
     }
-    echo "</ul>";
+    echo "</table>";
 
     
 
