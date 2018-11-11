@@ -9,7 +9,7 @@ try {
     
     echo "<h2>Posts</h2>";
     echo "<table>";
-    echo "<tr><td>Titulo</td><td>Autor</td></tr>";
+    echo "<tr><td><font color='red'>Titulo</font></td><td><font color='red'>Autor</font></td></tr>";
     foreach ($posts as $post ) {
         echo "<tr>";
         echo "<td>".$post->title."</td> <td>" . $post->autor . "</td>";
