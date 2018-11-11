@@ -7,6 +7,7 @@ try {
     $statement->execute();
     $posts = $statement->fetchAll(PDO::FETCH_OBJ);
     
+    if(isset($_GET['ver'])){
     echo "<h2>Posts</h2>";
     echo "<table>";
     echo "<tr><td><font color='red'>Titulo</font></td><td><font color='red'>Autor</font></td></tr>";
@@ -16,9 +17,11 @@ try {
         echo "</tr>";
     }
     echo "</table>";
-
     
-
+    }
+    
+    echo "<a href='index.php?ver=ver'>Ver posts</a>";
+    
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
