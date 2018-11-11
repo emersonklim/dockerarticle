@@ -14,6 +14,16 @@ try {
     }
     echo "</ul>";
 
+    $statement = $pdo->prepare("SELECT * FROM posts where id=3");
+    $statement->execute();
+    $ultimos = $statement->fetchAll(PDO::FETCH_OBJ);
+    
+    echo "<h2>Ultimo Post</h2>";
+    echo "<ul>";
+    foreach ($ultimos as $post ) {
+        echo "<li><b>Ultimo</b>".$post->title."</li>";
+    }
+    echo "</ul>";
 
 } catch(PDOException $e) {
     echo $e->getMessage();
