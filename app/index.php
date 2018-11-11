@@ -13,17 +13,7 @@ try {
         echo "<li>".$post->title."</li>";
     }
     echo "</ul>";
-    
-    $statement2 = $pdo->prepare("SELECT * FROM posts where id=3");
-    $statement2->execute();
-    $ultimos = $statement2->fetchAll(PDO::FETCH_OBJ);
-    
-    echo "<h2>Ultimo Post</h2>";
-    echo "<ul>";
-    foreach ($ultimos as $post ) {
-        echo "<li><b>Ultimo</b>".$post->title."</li>";
-    }
-    echo "</ul>";
+
 
 } catch(PDOException $e) {
     echo $e->getMessage();
